@@ -15,5 +15,6 @@ get '/dwayne_johnson' do
 end
 
 get '/cat' do
+  @cat_name = ["Dwayne", "The Rock", "The People's Champion", "The Hoff"].sample 
   erb(:index)
 end
