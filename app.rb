@@ -18,6 +18,6 @@ end
 get '/named-cat' do
   p params
   @cat_name = params[:name]
-  @cat_age = params[:age]
+  @cat_age = params[:age] if params[:age].is_a?(String)
   erb :index
 end
