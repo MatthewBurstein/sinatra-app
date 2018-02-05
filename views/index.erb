@@ -1,5 +1,8 @@
 
 <h1>My name is <%= @cat_name %></h1>
+<% if @cat_age %>
+<h2>I am <%= @cat_age%></h2>
+<% end %>
 <div style="border:5px red dashed">
   <img src="http://bit.ly/1eze8aE" alt="pretty cat picture" height="1000px"/>
 </div>

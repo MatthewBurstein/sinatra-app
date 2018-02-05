@@ -10,11 +10,14 @@ get '/secret' do
  "Oh my god you <em>found my secret</em>."
 end
 
-get '/dwayne_johnson' do
-  "some kind of man"
+get '/random-cat' do
+  @cat_name = ["Dwayne", "The Rock", "The People's Champion", "The Hoff"].sample
+  erb(:index)
 end
 
-get '/cat' do
-  @cat_name = ["Dwayne", "The Rock", "The People's Champion", "The Hoff"].sample 
-  erb(:index)
+get '/named-cat' do
+  p params
+  @cat_name = params[:name]
+  @cat_age = params[:age]
+  erb :index
 end
